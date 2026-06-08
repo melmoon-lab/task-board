@@ -6,6 +6,33 @@
 
 タスク管理ボードアプリケーション。
 
+## デプロイ先
+
+https://melmoon-lab.github.io/task-board/
+
+`main` ブランチへのプッシュで GitHub Actions が自動ビルド・デプロイを実行する。
+
+## 技術スタック
+
+| 用途 | ライブラリ / ツール |
+|------|-------------------|
+| UI フレームワーク | React 18 |
+| ビルドツール | Vite 5 |
+| 言語 | JavaScript (JSX) |
+| スタイル | CSS（コンポーネントごとの `.css` ファイル） |
+| 状態管理 | React `useState` / `useEffect`（外部ライブラリなし） |
+| 永続化 | `localStorage` |
+| CI/CD | GitHub Actions |
+| ホスティング | GitHub Pages |
+
+## コンポーネント命名規約
+
+- **ファイル名**: PascalCase（例: `App.jsx`, `TaskItem.jsx`）
+- **コンポーネント関数名**: PascalCase でファイル名と一致させる
+- **CSS ファイル名**: コンポーネント名と同名（例: `App.css`, `TaskItem.css`）
+- **CSS クラス名**: kebab-case（例: `.task-item`, `.delete-btn`, `.input-row`）
+- **ローカルストレージキー**: `task-board-<用途>` 形式（例: `task-board-tasks`）
+
 ## Git 運用ルール
 
 - コードを変更するたびに、必ず GitHub へプッシュすること
